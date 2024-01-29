@@ -66,6 +66,8 @@ let sensibility = 0.0;
     13 = DOWN
     14 = LEFT
     15 = RIGHT
+    16 = RSB
+    17 = LSB
 
 */
 
@@ -275,6 +277,14 @@ window.addEventListener("keyup", (event) => {
             case 'A':
                 controller_buttons.A.pressed = false;
                 simulateButtonUnpress(0)
+            break;
+            case 'RSB':
+                controller_buttons.A.pressed = false;
+                simulateButtonUnpress(16)
+            break;
+            case 'LSB':
+                controller_buttons.A.pressed = false;
+                simulateButtonUnpress(17)                    
             break;
             case 'B':
                 controller_buttons.B.pressed = false;
