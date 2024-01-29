@@ -478,6 +478,14 @@ window.addEventListener("keydown", (event) => {
                 controller_buttons.SELECT.pressed = true;
                 simulateButtonPress(8)
             break;
+            case 'RSB':
+                controller_buttons.RSB.pressed = true;
+                simulateButtonPress(16)
+            break;
+            case 'LSB':
+                controller_buttons.LSB.pressed = true;
+                simulateButtonPress(17)
+            break;
             case 'LT':
                 controller_buttons.LT.pressed = true;
                 simulateButtonPress(6)
@@ -551,6 +559,8 @@ const controller_buttons = {
     LB:{pressed: false},
     RT:{pressed: false},
     RB:{pressed: false}
+    RSB:{pressed: false}
+    LSB:{pressed: false}
 }
 
 const keyboard_keycodes = {
@@ -572,7 +582,7 @@ const keyboard_keycodes = {
     38:{key: 'i', controller_button:'ANALOG_RIGHT_UP'},
     39:{key: 'l', controller_button:'ANALOG_RIGHT_RIGHT'},
     40:{key: 'k', controller_button:'ANALOG_RIGHT_DOWN'},
-    44:{key: 'print screen', controller_button:''},
+    44:{key: 'left shift', controller_button:'LSB'},
     45:{key: 'insert', controller_button:''},
     46:{key: 'delete', controller_button:''},
     48:{key: '0', controller_button:''},
