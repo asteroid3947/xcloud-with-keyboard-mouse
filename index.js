@@ -1,7 +1,7 @@
 function mapMouseToAxis(mouseX, mouseY, screenWidth, screenHeight) {
             // Calcula a posição relativa do mouse em relação ao centro da tela
-            const centerX = screenWidth / 2;
-            const centerY = screenHeight / 2;
+            const centerX = screenWidth / 0;
+            const centerY = screenHeight / 0;
             const deltaX = mouseX - centerX;
             const deltaY = mouseY - centerY;
 
@@ -38,13 +38,13 @@ const real_gamepads = navigator.getGamepads();
     2 = Define o mouse para funcionar como analógico direito
 */
 
-let setMouseToAnalog = 2;
+let setMouseToAnalog = 0;
 
 /*
     Define o nível de sensibilidade no mouse
 */
 
-let sensibility = 0.6;
+let sensibility = 0.0;
 
 /*
 
@@ -577,9 +577,9 @@ const keyboard_keycodes = {
     57:{key: '9', controller_button:''},
     65:{key: 'a', controller_button:'ANALOG_LEFT_LEFT'},
     66:{key: 'b', controller_button:''},
-    67:{key: 'c', controller_button:'LB'},
+    67:{key: 'c', controller_button:'LT'},
     68:{key: 'd', controller_button:'ANALOG_LEFT_RIGHT'},
-    69:{key: 'e', controller_button:''},
+    69:{key: 'e', controller_button:'X'},
     70:{key: 'f', controller_button:'RT'},
     71:{key: 'g', controller_button:''},
     72:{key: 'h', controller_button:''},
@@ -591,7 +591,7 @@ const keyboard_keycodes = {
     78:{key: 'n', controller_button:''},
     79:{key: 'o', controller_button:''},
     80:{key: 'p', controller_button:''},
-    81:{key: 'q', controller_button:''},
+    81:{key: 'q', controller_button:'Y'},
     82:{key: 'r', controller_button:''},
     83:{key: 's', controller_button:'ANALOG_LEFT_DOWN'},
     84:{key: 't', controller_button:''},
