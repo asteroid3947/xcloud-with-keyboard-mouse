@@ -66,8 +66,8 @@ let sensibility = 0.0;
     13 = DOWN
     14 = LEFT
     15 = RIGHT
-    16 = RSB
-    17 = LSB
+    16 = ANALOG_RIGHT_BUTTON
+    17 = ANALOG_LEFT_BUTTON
 
 */
 
@@ -278,12 +278,12 @@ window.addEventListener("keyup", (event) => {
                 controller_buttons.A.pressed = false;
                 simulateButtonUnpress(0)
             break;
-            case 'RSB':
-                controller_buttons.A.pressed = false;
+            case 'ANALOG_RIGHT_BUTTON':
+                controller_buttons.ANALOG_RIGHT_BUTTON.pressed = false;
                 simulateButtonUnpress(16)
             break;
-            case 'LSB':
-                controller_buttons.A.pressed = false;
+            case 'ANALOG_LEFT_BUTTON':
+                controller_buttons.ANALOG_LEFT_BUTTON.pressed = false;
                 simulateButtonUnpress(17)                    
             break;
             case 'B':
@@ -478,12 +478,12 @@ window.addEventListener("keydown", (event) => {
                 controller_buttons.SELECT.pressed = true;
                 simulateButtonPress(8)
             break;
-            case 'RSB':
-                controller_buttons.RSB.pressed = true;
+            case 'ANALOG_RIGHT_BUTTON':
+                controller_buttons.ANALOG_RIGHT_BUTTON.pressed = true;
                 simulateButtonPress(16)
             break;
-            case 'LSB':
-                controller_buttons.LSB.pressed = true;
+            case 'ANALOG_LEFT_BUTTON':
+                controller_buttons.ANALOG_LEFT_BUTTON.pressed = true;
                 simulateButtonPress(17)
             break;
             case 'LT':
@@ -558,9 +558,9 @@ const controller_buttons = {
     LT:{pressed: false},
     LB:{pressed: false},
     RT:{pressed: false},
-    RB:{pressed: false}
-    RSB:{pressed: false}
-    LSB:{pressed: false}
+    RB:{pressed: false},
+    ANALOG_RIGHT_BUTTON:{pressed: false},
+    ANALOG_LEFT_BUTTON:{pressed: false}
 }
 
 const keyboard_keycodes = {
@@ -578,11 +578,11 @@ const keyboard_keycodes = {
     34:{key: 'page down', controller_button:''},
     35:{key: 'end', controller_button:''},
     36:{key: 'home', controller_button:''},
-    37:{key: 'j', controller_button:'ANALOG_RIGHT_LEFT'},
-    38:{key: 'i', controller_button:'ANALOG_RIGHT_UP'},
-    39:{key: 'l', controller_button:'ANALOG_RIGHT_RIGHT'},
-    40:{key: 'k', controller_button:'ANALOG_RIGHT_DOWN'},
-    44:{key: 'left shift', controller_button:'LSB'},
+    37:{key: 'arrow left', controller_button:'STICK_LEFT'},
+    38:{key: 'arrow up', controller_button:'STICK_UP'},
+    39:{key: 'arrow right', controller_button:'STICK_RIGHT'},
+    40:{key: 'arrow down', controller_button:'STICK_DOWN'},
+    44:{key: 'left shift', controller_button:''},
     45:{key: 'insert', controller_button:''},
     46:{key: 'delete', controller_button:''},
     48:{key: '0', controller_button:''},
@@ -603,10 +603,10 @@ const keyboard_keycodes = {
     70:{key: 'f', controller_button:'RT'},
     71:{key: 'g', controller_button:''},
     72:{key: 'h', controller_button:''},
-    73:{key: 'arrow up', controller_button:'STICK_UP'},
-    74:{key: 'arrow left', controller_button:'STICK_LEFT'},
-    75:{key: 'arrow down', controller_button:'STICK_DOWN'},
-    76:{key: 'arrow right', controller_button:'STICK_RIGHT'},
+    73:{key: 'i', controller_button:'ANALOG_RIGHT_UP'},
+    74:{key: 'j', controller_button:'ANALOG_RIGHT_LEFT'},
+    75:{key: 'k', controller_button:'ANALOG_RIGHT_DOWN'},
+    76:{key: 'l', controller_button:'ANALOG_RIGHT_RIGHT'},
     77:{key: 'm', controller_button:''},
     78:{key: 'n', controller_button:''},
     79:{key: 'o', controller_button:''},
